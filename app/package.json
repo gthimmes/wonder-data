@@ -1,0 +1,39 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "gen:data": "tsx scripts/generate-data.ts",
+    "test": "vitest run",
+    "check:browser": "node scripts/browser-check.mjs --screens ../docs/screens"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "@duckdb/duckdb-wasm": "1.32.0",
+    "apache-arrow": "^21.2.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "vega": "^6.4.0",
+    "vega-embed": "^7.3.0",
+    "vega-lite": "^6.5.0",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@duckdb/node-api": "1.5.6-r.1",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "playwright-core": "^1.64.0",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.4"
+  }
+}

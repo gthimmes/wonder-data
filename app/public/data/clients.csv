@@ -1,0 +1,181 @@
+id,name,industry,state,partner_id,manager_id,since,status,tier
+1,Redwood Properties,Retail,TX,3,24,2017-09-24,Active,B
+2,Silverline Properties,Manufacturing,GA,5,11,2021-06-04,Active,C
+3,Meridian Labs,Manufacturing,TX,2,7,2022-04-19,Active,B
+4,Northwind Industries,Healthcare,WA,2,24,2020-08-26,Active,B
+5,Granite Logistics,Manufacturing,GA,5,11,2023-06-16,Active,B
+6,Granite Clinic,Manufacturing,TX,1,24,2018-02-04,Active,C
+7,Meridian Ventures,Professional Services,IL,4,16,2021-08-26,Active,A
+8,Blue Ridge Logistics,Healthcare,WA,1,13,2023-01-04,Active,A
+9,Granite Clinic Co,Professional Services,TX,2,8,2019-12-07,Active,B
+10,Cedar Industries,Professional Services,CO,4,10,2022-05-29,Active,B
+11,Harbor Capital,Agriculture,NY,2,23,2019-08-05,Active,B
+12,Horizon Clinic,Manufacturing,FL,4,19,2023-11-04,Active,B
+13,Prairie Capital,Hospitality,IL,6,10,2018-11-21,Active,A
+14,Meridian Foods,Real Estate,CA,6,18,2018-08-24,Active,A
+15,Northwind Properties,Nonprofit,NY,4,17,2021-04-11,Active,C
+16,Ironworks Industries,Nonprofit,GA,5,18,2020-03-09,Former,B
+17,Copper Labs,Real Estate,WA,3,21,2017-04-03,Active,B
+18,Horizon Capital,Agriculture,NY,6,13,2018-01-18,Active,C
+19,Juniper Labs,Construction,IL,6,12,2020-01-13,Active,B
+20,Silverline Group,Construction,FL,4,24,2021-01-14,Former,C
+21,Atlas Dental,Real Estate,AZ,6,23,2023-05-04,Active,B
+22,Lakeside Ventures,Retail,NY,1,24,2019-08-18,Active,A
+23,Meridian Group,Healthcare,OH,2,23,2023-07-16,Active,C
+24,Beacon Capital,Construction,FL,6,24,2020-09-11,Active,C
+25,Blue Ridge Industries,Technology,WA,6,12,2020-08-07,Active,B
+26,Beacon Holdings LLC,Hospitality,TX,5,13,2022-06-03,Active,C
+27,Beacon Partners,Healthcare,NY,1,11,2020-07-04,Former,B
+28,Copper Foods,Agriculture,CO,4,13,2018-04-24,Active,C
+29,Redwood Labs,Real Estate,IL,2,9,2018-03-23,Active,A
+30,Lakeside Farms,Agriculture,GA,2,12,2018-04-24,Active,B
+31,Northwind Holdings,Technology,AZ,3,7,2018-05-26,Active,C
+32,Meridian Clinic,Healthcare,AZ,4,12,2018-10-19,Active,C
+33,Granite Hospitality,Retail,TX,3,21,2018-07-11,Active,C
+34,Keystone Hospitality,Manufacturing,FL,3,8,2020-03-10,Former,A
+35,Copper Builders,Manufacturing,IL,6,7,2021-09-25,Former,C
+36,Granite Foods,Retail,CA,1,21,2023-11-22,Active,C
+37,Beacon Farms,Construction,OH,5,21,2019-04-25,Active,A
+38,Blue Ridge Holdings,Agriculture,WA,2,14,2020-11-04,Active,C
+39,Keystone Logistics,Nonprofit,GA,4,17,2023-06-21,Active,C
+40,Harbor Foods,Hospitality,NY,3,16,2022-09-27,Active,C
+41,Granite Dental,Agriculture,TX,6,23,2018-05-14,Active,A
+42,Harbor Farms,Hospitality,OH,1,12,2021-08-12,Active,C
+43,Granite Properties,Hospitality,CO,2,22,2021-08-17,Active,C
+44,Copper Ventures,Nonprofit,NY,3,17,2017-10-27,Active,C
+45,Beacon Hospitality,Manufacturing,OH,1,11,2020-10-27,Active,B
+46,Keystone Properties,Real Estate,NY,6,12,2018-12-30,Active,C
+47,Prairie Group,Professional Services,OH,5,24,2017-09-17,Active,B
+48,Keystone Industries,Nonprofit,CO,5,14,2022-03-30,Active,C
+49,Cedar Holdings,Nonprofit,NY,6,14,2021-08-09,Active,B
+50,Northwind Logistics,Technology,OH,1,11,2017-09-12,Active,B
+51,Blue Ridge Properties Co,Agriculture,FL,2,19,2021-11-08,Active,B
+52,Granite Industries,Agriculture,NY,3,24,2020-09-26,Active,C
+53,Horizon Hospitality,Hospitality,NY,1,11,2018-06-10,Active,B
+54,Silverline Foods LLC,Professional Services,FL,3,23,2023-11-14,Active,B
+55,Beacon Ventures,Retail,WA,4,8,2017-09-30,Active,A
+56,Keystone Clinic,Technology,FL,2,23,2020-10-13,Former,A
+57,Atlas Clinic,Hospitality,IL,4,9,2021-09-09,Active,C
+58,Summit Capital,Professional Services,GA,2,11,2020-01-01,Active,B
+59,Redwood Partners,Nonprofit,IL,1,21,2019-06-18,Active,A
+60,Juniper Dental,Real Estate,CA,6,12,2022-07-25,Active,C
+61,Blue Ridge Labs,Construction,FL,3,17,2023-06-20,Active,A
+62,Granite Capital,Real Estate,IL,3,14,2023-02-23,Active,C
+63,Blue Ridge Dental,Hospitality,WA,5,8,2022-08-29,Former,C
+64,Harbor Ventures,Retail,TX,3,18,2020-10-26,Active,C
+65,Evergreen Clinic Co,Nonprofit,WA,5,13,2022-05-16,Active,A
+66,Harbor Clinic,Professional Services,FL,2,23,2021-03-17,Active,C
+67,Meridian Partners,Hospitality,CO,6,11,2022-03-24,Active,C
+68,Horizon Logistics,Nonprofit,OH,1,7,2021-10-06,Active,B
+69,Lakeside Partners,Manufacturing,CO,2,7,2023-04-14,Active,B
+70,Cedar Builders,Real Estate,WA,6,10,2017-04-28,Active,A
+71,Summit Dental,Technology,IL,2,23,2017-07-10,Active,C
+72,Redwood Clinic,Healthcare,NY,2,12,2020-10-17,Active,C
+73,Cedar Capital,Real Estate,CO,1,15,2017-10-17,Active,B
+74,Northwind Ventures,Nonprofit,NY,3,18,2020-09-23,Active,B
+75,Ironworks Group,Nonprofit,OH,3,20,2017-10-31,Active,B
+76,Keystone Labs,Manufacturing,NY,1,19,2018-10-25,Active,B
+77,Summit Partners,Technology,CO,1,13,2019-10-09,Active,C
+78,Evergreen Hospitality,Manufacturing,WA,4,20,2023-06-29,Active,B
+79,Copper Foods Inc,Hospitality,IL,3,14,2023-06-30,Active,A
+80,Copper Builders LLC,Agriculture,GA,1,7,2022-06-07,Active,B
+81,Redwood Holdings Inc,Nonprofit,TX,1,24,2022-09-25,Active,C
+82,Silverline Clinic,Retail,OH,5,19,2017-11-12,Active,B
+83,Harbor Partners,Agriculture,TX,3,20,2017-03-10,Active,B
+84,Evergreen Dental,Real Estate,IL,1,13,2017-12-27,Active,C
+85,Harbor Properties,Healthcare,IL,1,21,2020-11-16,Active,C
+86,Ironworks Foods,Healthcare,IL,6,16,2020-06-25,Active,C
+87,Horizon Builders,Agriculture,AZ,3,13,2021-05-26,Active,B
+88,Silverline Industries,Nonprofit,NY,5,13,2022-06-13,Active,B
+89,Evergreen Partners Inc,Hospitality,IL,3,17,2019-11-21,Active,A
+90,Juniper Logistics Co,Real Estate,WA,6,18,2022-02-23,Active,B
+91,Pioneer Dental,Healthcare,GA,6,16,2018-10-11,Active,C
+92,Juniper Foods,Construction,CO,2,9,2021-08-14,Active,C
+93,Pioneer Farms Co,Technology,WA,3,12,2019-08-28,Active,B
+94,Ironworks Builders,Healthcare,GA,5,14,2017-08-13,Active,B
+95,Prairie Properties,Technology,WA,1,15,2018-12-08,Active,C
+96,Prairie Holdings,Retail,FL,1,13,2022-11-09,Active,A
+97,Evergreen Labs,Professional Services,WA,5,23,2023-09-09,Active,C
+98,Lakeside Labs,Hospitality,WA,3,22,2018-09-30,Active,B
+99,Keystone Ventures,Hospitality,GA,4,7,2017-10-14,Active,B
+100,Juniper Partners,Retail,CA,6,21,2021-04-22,Active,C
+101,Pioneer Partners,Healthcare,AZ,5,20,2020-06-23,Active,C
+102,Harbor Group,Professional Services,AZ,1,13,2020-09-01,Active,B
+103,Cedar Hospitality,Manufacturing,FL,3,24,2022-02-25,Active,C
+104,Harbor Dental,Healthcare,OH,1,8,2021-11-30,Former,C
+105,Beacon Holdings,Technology,TX,1,13,2021-05-21,Active,C
+106,Atlas Dental LLC,Retail,AZ,4,10,2022-05-22,Active,A
+107,Horizon Farms,Agriculture,OH,5,13,2017-11-12,Former,C
+108,Horizon Dental,Nonprofit,GA,3,12,2021-06-11,Active,C
+109,Ironworks Hospitality,Manufacturing,CO,4,14,2022-04-27,Active,C
+110,Northwind Builders,Professional Services,IL,6,15,2021-04-03,Active,C
+111,Evergreen Industries,Nonprofit,OH,5,20,2020-07-12,Active,C
+112,Pioneer Ventures,Construction,CO,4,11,2020-10-25,Active,A
+113,Redwood Capital,Agriculture,CO,4,8,2021-05-29,Active,C
+114,Redwood Foods,Agriculture,NY,6,17,2020-06-30,Active,C
+115,Evergreen Partners,Healthcare,CO,1,15,2017-11-28,Active,C
+116,Copper Farms Co,Manufacturing,TX,5,23,2017-06-20,Former,C
+117,Summit Clinic,Technology,OH,3,11,2023-01-28,Active,A
+118,Northwind Partners,Agriculture,TX,5,24,2021-08-10,Active,A
+119,Juniper Ventures,Nonprofit,AZ,4,21,2019-11-08,Active,C
+120,Summit Dental Co,Professional Services,AZ,4,7,2017-10-22,Active,B
+121,Evergreen Clinic,Hospitality,AZ,2,23,2020-09-08,Active,C
+122,Granite Ventures Co,Agriculture,TX,6,15,2023-05-15,Active,B
+123,Beacon Dental,Professional Services,CO,4,22,2019-01-17,Active,A
+124,Northwind Logistics Inc,Professional Services,CO,3,10,2021-06-25,Active,C
+125,Cedar Labs,Healthcare,AZ,5,8,2021-02-07,Active,C
+126,Horizon Industries Inc,Hospitality,IL,4,12,2020-01-26,Active,B
+127,Atlas Partners LLC,Healthcare,CO,1,21,2021-07-29,Active,C
+128,Meridian Builders,Construction,GA,6,9,2018-02-19,Active,C
+129,Meridian Logistics Inc,Healthcare,GA,3,15,2022-06-09,Active,C
+130,Redwood Clinic LLC,Hospitality,CA,4,7,2020-06-06,Active,C
+131,Meridian Farms,Technology,TX,1,15,2021-02-18,Active,A
+132,Harbor Industries,Healthcare,AZ,6,23,2023-04-23,Active,C
+133,Pioneer Holdings,Technology,FL,2,9,2017-07-06,Active,C
+134,Northwind Clinic,Retail,CA,6,10,2021-05-08,Active,B
+135,Prairie Partners,Real Estate,TX,4,18,2021-09-21,Active,C
+136,Northwind Farms,Healthcare,GA,2,24,2023-12-19,Active,A
+137,Silverline Partners,Manufacturing,OH,2,22,2019-06-21,Active,A
+138,Pioneer Capital LLC,Technology,AZ,1,17,2018-01-23,Active,C
+139,Juniper Group,Technology,OH,3,20,2020-11-10,Former,C
+140,Granite Properties Co,Professional Services,OH,2,7,2021-04-28,Active,C
+141,Summit Industries,Nonprofit,OH,2,15,2017-10-04,Active,C
+142,Cedar Foods,Nonprofit,IL,1,18,2018-05-13,Active,A
+143,Prairie Farms Inc,Retail,OH,5,23,2020-09-20,Active,C
+144,Atlas Labs,Retail,WA,5,14,2020-10-11,Active,B
+145,Granite Ventures,Healthcare,GA,1,13,2017-12-10,Former,B
+146,Evergreen Industries Co,Agriculture,CA,5,10,2022-04-17,Active,C
+147,Prairie Farms,Real Estate,CO,1,7,2022-03-20,Active,A
+148,Harbor Holdings,Nonprofit,TX,2,18,2022-07-04,Active,A
+149,Keystone Foods,Hospitality,NY,3,13,2020-02-22,Active,A
+150,Lakeside Hospitality,Retail,AZ,4,22,2024-01-01,Active,B
+151,Ironworks Partners,Agriculture,FL,4,7,2020-06-24,Active,A
+152,Granite Group,Construction,AZ,1,19,2018-08-11,Former,C
+153,Meridian Hospitality,Real Estate,IL,2,7,2018-06-06,Former,C
+154,Summit Properties LLC,Construction,CA,2,14,2023-08-31,Active,A
+155,Redwood Ventures,Construction,WA,3,11,2020-11-23,Active,B
+156,Blue Ridge Foods,Professional Services,FL,3,12,2017-08-23,Active,C
+157,Granite Capital Co,Real Estate,CO,3,20,2018-01-09,Active,B
+158,Keystone Farms,Hospitality,CO,6,19,2023-04-15,Active,B
+159,Atlas Logistics,Retail,CA,1,15,2018-10-26,Active,A
+160,Atlas Properties,Nonprofit,NY,3,12,2021-11-27,Active,B
+161,Granite Farms,Professional Services,TX,1,23,2021-05-05,Active,C
+162,Keystone Dental Inc,Professional Services,OH,5,10,2020-10-29,Active,B
+163,Horizon Group,Agriculture,NY,3,20,2020-09-28,Former,B
+164,Cedar Group,Agriculture,AZ,2,21,2022-12-06,Active,C
+165,Pioneer Properties Co,Technology,WA,1,8,2022-04-17,Active,C
+166,Evergreen Industries LLC,Healthcare,NY,6,10,2022-07-13,Former,C
+167,Redwood Builders Inc,Agriculture,GA,1,21,2020-09-30,Active,C
+168,Juniper Properties LLC,Real Estate,AZ,5,17,2022-12-15,Active,B
+169,Lakeside Builders,Construction,CA,5,17,2020-01-10,Active,A
+170,Beacon Clinic,Manufacturing,IL,2,19,2017-10-16,Former,C
+171,Summit Group,Technology,CO,4,12,2017-09-23,Active,C
+172,Blue Ridge Builders,Technology,FL,1,15,2023-09-08,Active,A
+173,Ironworks Holdings,Technology,FL,1,20,2021-02-19,Active,C
+174,Granite Holdings,Nonprofit,CO,1,14,2018-02-14,Active,A
+175,Summit Builders,Hospitality,GA,5,11,2021-06-30,Active,B
+176,Lakeside Group,Construction,FL,1,14,2020-05-14,Active,C
+177,Evergreen Properties,Hospitality,FL,2,21,2017-07-17,Active,B
+178,Pioneer Builders Co,Manufacturing,IL,1,7,2018-01-02,Active,C
+179,Evergreen Labs Co,Real Estate,NY,3,22,2021-03-09,Active,C
+180,Northwind Foods,Hospitality,AZ,2,22,2018-04-11,Active,C

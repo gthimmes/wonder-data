@@ -1,0 +1,422 @@
+id,client_id,name,service_line,fee_type,budget_hours,fixed_fee,started_on,status,lead_id
+1,1,Bookkeeping 2025 Services,Bookkeeping,Fixed,176,36432,2025-03-29,On Hold,15
+2,1,Advisory 2024 Services,Advisory,Fixed,291,52380,2024-01-15,On Hold,24
+3,2,CAS 2025 Services,CAS,Fixed,153,23562,2025-04-18,Active,22
+4,3,Audit 2025 Engagement,Audit,Fixed,468,76284,2025-04-12,Active,19
+5,3,CAS 2023 Services,CAS,Fixed,290,56260,2023-07-06,Active,8
+6,3,Advisory 2026 Services,Advisory,Fixed,271,44444,2026-09-12,Closed,8
+7,4,Advisory 2026 Services,Advisory,Hourly,179,,2026-06-01,Closed,9
+8,4,Advisory 2024 Services,Advisory,Hourly,120,,2024-10-01,Active,18
+9,5,Audit 2026 Engagement,Audit,Hourly,411,,2026-01-31,Closed,7
+10,5,Bookkeeping 2023 Services,Bookkeeping,Fixed,169,41067,2023-07-16,Active,18
+11,6,CAS 2026 Services,CAS,Fixed,177,44427,2026-07-16,Active,23
+12,6,Audit 2023 Engagement,Audit,Fixed,515,82915,2023-12-12,Active,21
+13,7,CAS 2024 Services,CAS,Fixed,146,22192,2024-03-17,On Hold,22
+14,7,Bookkeeping 2025 Services,Bookkeeping,Fixed,158,38394,2025-01-21,Active,7
+15,7,Tax 2023 Return,Tax,Fixed,67,16080,2023-09-03,Active,7
+16,8,CAS 2024 Services,CAS,Fixed,137,33291,2024-04-08,Closed,18
+17,8,Audit 2023 Engagement,Audit,Fixed,203,49126,2023-12-31,On Hold,19
+18,8,Audit 2026 Engagement,Audit,Hourly,127,,2026-01-09,Active,13
+19,8,Advisory 2023 Services,Advisory,Fixed,106,17066,2023-12-23,Active,16
+20,8,Tax 2023 Return,Tax,Hourly,94,,2023-06-23,Closed,22
+21,9,Audit 2024 Engagement,Audit,Hourly,587,,2024-06-05,Active,15
+22,9,Bookkeeping 2025 Services,Bookkeeping,Fixed,221,37128,2025-03-03,Active,14
+23,10,CAS 2024 Services,CAS,Fixed,274,55896,2024-09-19,Active,7
+24,10,CAS 2023 Services,CAS,Fixed,109,28122,2023-08-21,Active,19
+25,11,Audit 2024 Engagement,Audit,Hourly,153,,2024-08-28,Closed,24
+26,11,Audit 2026 Engagement,Audit,Fixed,531,118413,2026-06-06,Active,23
+27,12,Advisory 2024 Services,Advisory,Fixed,229,42365,2024-05-05,Closed,20
+28,12,Tax 2025 Return,Tax,Hourly,140,,2025-05-08,Closed,8
+29,13,Bookkeeping 2024 Services,Bookkeeping,Fixed,63,13608,2024-04-24,Closed,15
+30,13,CAS 2025 Services,CAS,Fixed,45,9855,2025-12-02,Active,10
+31,13,Tax 2026 Return,Tax,Fixed,94,21432,2026-02-17,Active,17
+32,13,CAS 2025 Services,CAS,Fixed,210,43890,2025-07-06,Active,22
+33,14,Bookkeeping 2023 Services,Bookkeeping,Fixed,40,7760,2023-11-25,Active,16
+34,14,Bookkeeping 2024 Services,Bookkeeping,Fixed,50,10300,2024-06-11,Active,15
+35,14,Audit 2026 Engagement,Audit,Fixed,483,121716,2026-05-26,Active,11
+36,14,CAS 2024 Services,CAS,Fixed,213,43452,2024-04-05,On Hold,24
+37,15,CAS 2026 Services,CAS,Fixed,285,49305,2026-05-11,Active,12
+38,15,Tax 2025 Return,Tax,Fixed,109,21364,2025-07-17,Active,20
+39,16,Audit 2026 Engagement,Audit,Hourly,492,,2026-06-05,Closed,16
+40,16,Bookkeeping 2026 Services,Bookkeeping,Fixed,156,39468,2026-03-06,Closed,8
+41,16,Advisory 2024 Services,Advisory,Hourly,138,,2024-11-05,Closed,19
+42,17,Bookkeeping 2025 Services,Bookkeeping,Fixed,127,20828,2025-04-12,On Hold,24
+43,17,CAS 2023 Services,CAS,Fixed,92,15640,2023-12-18,Active,9
+44,17,Bookkeeping 2023 Services,Bookkeeping,Fixed,95,20425,2023-09-10,Active,24
+45,18,Audit 2025 Engagement,Audit,Hourly,161,,2025-02-02,On Hold,18
+46,18,Bookkeeping 2026 Services,Bookkeeping,Fixed,157,27789,2026-05-07,Active,10
+47,19,Bookkeeping 2026 Services,Bookkeeping,Fixed,57,14079,2026-07-21,Closed,13
+48,19,Tax 2023 Return,Tax,Fixed,190,31160,2023-07-26,Active,10
+49,20,Tax 2024 Return,Tax,Hourly,101,,2024-12-08,Closed,22
+50,21,Bookkeeping 2024 Services,Bookkeeping,Fixed,285,72960,2024-07-14,On Hold,7
+51,21,Bookkeeping 2026 Services,Bookkeeping,Fixed,38,6650,2026-02-14,Active,18
+52,22,Tax 2025 Return,Tax,Hourly,30,,2025-03-19,Active,18
+53,22,Bookkeeping 2023 Services,Bookkeeping,Fixed,233,41940,2023-12-19,Closed,24
+54,22,Tax 2024 Return,Tax,Fixed,193,42074,2024-05-12,Active,22
+55,22,Tax 2023 Return,Tax,Hourly,162,,2023-11-26,Active,19
+56,23,Audit 2026 Engagement,Audit,Fixed,522,117450,2026-04-28,Active,18
+57,23,CAS 2026 Services,CAS,Fixed,51,8568,2026-06-27,Closed,9
+58,24,CAS 2026 Services,CAS,Fixed,239,36567,2026-08-18,Active,22
+59,24,Advisory 2025 Services,Advisory,Fixed,58,11252,2025-06-05,Closed,24
+60,25,Advisory 2023 Services,Advisory,Fixed,218,44908,2023-07-17,Active,19
+61,25,Audit 2025 Engagement,Audit,Hourly,584,,2025-11-23,Active,9
+62,26,CAS 2025 Services,CAS,Fixed,111,22977,2025-08-02,Closed,9
+63,26,Bookkeeping 2024 Services,Bookkeeping,Fixed,276,62376,2024-06-20,Active,23
+64,27,Advisory 2024 Services,Advisory,Hourly,38,,2024-01-11,Closed,10
+65,27,Tax 2025 Return,Tax,Fixed,118,30562,2025-10-11,Closed,18
+66,27,Bookkeeping 2026 Services,Bookkeeping,Fixed,113,21357,2026-01-04,Closed,17
+67,28,Advisory 2024 Services,Advisory,Hourly,191,,2024-06-27,Active,23
+68,28,CAS 2024 Services,CAS,Fixed,158,26070,2024-07-20,Closed,10
+69,29,CAS 2024 Services,CAS,Fixed,57,10830,2024-01-07,Closed,10
+70,29,Audit 2026 Engagement,Audit,Fixed,475,108300,2026-07-18,Active,7
+71,29,Advisory 2026 Services,Advisory,Fixed,255,66300,2026-08-16,On Hold,23
+72,29,Audit 2025 Engagement,Audit,Fixed,297,68904,2025-04-14,Active,13
+73,29,Bookkeeping 2024 Services,Bookkeeping,Fixed,151,36693,2024-07-19,Active,19
+74,30,CAS 2024 Services,CAS,Fixed,176,43472,2024-02-29,Active,19
+75,30,CAS 2024 Services,CAS,Fixed,250,58750,2024-03-31,Active,19
+76,30,Audit 2025 Engagement,Audit,Hourly,178,,2025-01-04,Active,12
+77,31,Advisory 2024 Services,Advisory,Fixed,277,71743,2024-12-04,Active,9
+78,31,Audit 2024 Engagement,Audit,Fixed,299,73255,2024-06-09,Active,9
+79,32,Tax 2024 Return,Tax,Hourly,52,,2024-06-30,On Hold,23
+80,33,Advisory 2024 Services,Advisory,Fixed,98,19894,2024-12-02,Active,19
+81,34,Bookkeeping 2025 Services,Bookkeeping,Fixed,235,58985,2025-08-15,Closed,15
+82,34,Bookkeeping 2024 Services,Bookkeeping,Fixed,42,7392,2024-05-10,Closed,13
+83,34,Advisory 2023 Services,Advisory,Fixed,256,63744,2023-12-03,Closed,8
+84,34,Audit 2026 Engagement,Audit,Hourly,516,,2026-04-03,Closed,23
+85,35,Tax 2025 Return,Tax,Fixed,123,19680,2025-09-02,Closed,20
+86,36,Bookkeeping 2025 Services,Bookkeeping,Fixed,165,31185,2025-04-22,Closed,9
+87,36,CAS 2025 Services,CAS,Fixed,164,30176,2025-01-09,Active,12
+88,37,Advisory 2026 Services,Advisory,Fixed,246,42066,2026-03-26,On Hold,13
+89,37,CAS 2026 Services,CAS,Fixed,136,35088,2026-05-18,On Hold,19
+90,37,Tax 2025 Return,Tax,Hourly,157,,2025-08-07,Active,9
+91,38,CAS 2025 Services,CAS,Fixed,214,49648,2025-09-22,Closed,15
+92,39,Bookkeeping 2024 Services,Bookkeeping,Fixed,205,34440,2024-03-15,Active,10
+93,39,Tax 2026 Return,Tax,Fixed,61,12932,2026-07-12,Active,24
+94,40,Tax 2024 Return,Tax,Hourly,107,,2024-03-24,Active,8
+95,40,CAS 2024 Services,CAS,Fixed,42,9744,2024-09-26,Active,7
+96,41,Bookkeeping 2025 Services,Bookkeeping,Fixed,84,21588,2025-09-08,On Hold,11
+97,41,Tax 2024 Return,Tax,Hourly,199,,2024-11-18,Closed,15
+98,41,Bookkeeping 2026 Services,Bookkeeping,Fixed,295,75225,2026-02-08,On Hold,7
+99,41,CAS 2024 Services,CAS,Fixed,229,39159,2024-05-04,Active,11
+100,41,Tax 2025 Return,Tax,Hourly,117,,2025-08-23,Active,19
+101,42,Bookkeeping 2024 Services,Bookkeeping,Fixed,110,27390,2024-01-29,Closed,24
+102,42,Audit 2026 Engagement,Audit,Hourly,247,,2026-08-30,Active,17
+103,43,Audit 2024 Engagement,Audit,Hourly,427,,2024-05-27,Closed,14
+104,44,Advisory 2026 Services,Advisory,Hourly,267,,2026-09-13,Active,24
+105,44,Bookkeeping 2025 Services,Bookkeeping,Fixed,63,13986,2025-05-29,Active,13
+106,45,Audit 2026 Engagement,Audit,Fixed,133,20748,2026-08-24,Active,15
+107,45,CAS 2026 Services,CAS,Fixed,181,30227,2026-05-07,On Hold,21
+108,46,Bookkeeping 2024 Services,Bookkeeping,Fixed,218,54718,2024-05-27,Closed,17
+109,46,Audit 2025 Engagement,Audit,Hourly,166,,2025-05-12,On Hold,9
+110,47,Tax 2026 Return,Tax,Hourly,43,,2026-08-24,Active,19
+111,47,Bookkeeping 2024 Services,Bookkeeping,Fixed,201,47034,2024-05-24,Active,10
+112,48,Bookkeeping 2025 Services,Bookkeeping,Fixed,124,29016,2025-11-30,Active,19
+113,49,Tax 2025 Return,Tax,Fixed,175,44800,2025-07-28,Closed,21
+114,49,Bookkeeping 2025 Services,Bookkeeping,Fixed,118,19352,2025-09-24,Active,13
+115,50,CAS 2025 Services,CAS,Fixed,44,6952,2025-07-29,Active,9
+116,50,Advisory 2024 Services,Advisory,Fixed,113,26216,2024-08-21,Closed,21
+117,50,CAS 2025 Services,CAS,Fixed,256,43264,2025-05-27,Active,13
+118,51,Bookkeeping 2026 Services,Bookkeeping,Fixed,123,30504,2026-01-23,Closed,13
+119,51,Advisory 2025 Services,Advisory,Fixed,195,49530,2025-03-05,Active,14
+120,51,Audit 2023 Engagement,Audit,Fixed,498,119022,2023-08-16,Active,13
+121,52,Bookkeeping 2025 Services,Bookkeeping,Fixed,147,35133,2025-01-23,Active,18
+122,52,Advisory 2026 Services,Advisory,Fixed,134,30016,2026-07-25,Active,15
+123,53,Tax 2026 Return,Tax,Hourly,25,,2026-06-08,Closed,23
+124,53,Bookkeeping 2024 Services,Bookkeeping,Fixed,118,22184,2024-08-19,Active,24
+125,54,Tax 2026 Return,Tax,Fixed,113,27233,2026-09-10,Closed,7
+126,54,Tax 2024 Return,Tax,Fixed,59,11033,2024-01-15,On Hold,14
+127,55,Audit 2025 Engagement,Audit,Fixed,532,134064,2025-08-04,Active,15
+128,55,CAS 2026 Services,CAS,Fixed,163,32600,2026-05-23,On Hold,22
+129,55,Tax 2026 Return,Tax,Fixed,113,20340,2026-09-11,Active,23
+130,55,Advisory 2023 Services,Advisory,Fixed,285,61845,2023-12-26,Closed,10
+131,56,Bookkeeping 2024 Services,Bookkeeping,Fixed,85,14025,2024-02-09,Closed,15
+132,56,Advisory 2023 Services,Advisory,Hourly,283,,2023-07-13,Closed,19
+133,56,Audit 2024 Engagement,Audit,Fixed,218,47306,2024-04-09,Closed,20
+134,56,Advisory 2024 Services,Advisory,Fixed,122,31720,2024-05-04,Closed,19
+135,57,CAS 2025 Services,CAS,Fixed,68,12648,2025-12-28,Active,7
+136,58,Tax 2025 Return,Tax,Fixed,57,11742,2025-02-16,Active,8
+137,58,Advisory 2026 Services,Advisory,Fixed,164,26568,2026-02-15,On Hold,22
+138,58,Audit 2023 Engagement,Audit,Hourly,267,,2023-06-22,On Hold,12
+139,59,Bookkeeping 2024 Services,Bookkeeping,Fixed,218,52538,2024-02-06,Closed,12
+140,59,Audit 2024 Engagement,Audit,Hourly,280,,2024-02-14,Active,13
+141,59,Audit 2024 Engagement,Audit,Fixed,268,44756,2024-04-28,Active,21
+142,60,CAS 2025 Services,CAS,Fixed,250,61750,2025-02-04,Active,24
+143,60,Tax 2025 Return,Tax,Hourly,196,,2025-04-19,Active,12
+144,61,Advisory 2024 Services,Advisory,Fixed,196,41160,2024-11-26,Active,16
+145,61,Advisory 2024 Services,Advisory,Fixed,268,45560,2024-07-28,Closed,18
+146,61,Audit 2023 Engagement,Audit,Hourly,511,,2023-07-24,Active,19
+147,61,Advisory 2024 Services,Advisory,Hourly,217,,2024-05-16,Active,8
+148,61,Bookkeeping 2024 Services,Bookkeeping,Fixed,31,8029,2024-07-17,Active,20
+149,62,CAS 2026 Services,CAS,Fixed,114,23826,2026-01-15,Active,24
+150,63,CAS 2025 Services,CAS,Fixed,35,5880,2025-08-16,Closed,9
+151,63,Bookkeeping 2026 Services,Bookkeeping,Fixed,106,24168,2026-06-16,Closed,20
+152,64,CAS 2025 Services,CAS,Fixed,178,41652,2025-05-16,Active,17
+153,65,Audit 2023 Engagement,Audit,Hourly,187,,2023-07-12,Active,7
+154,65,Advisory 2023 Services,Advisory,Hourly,249,,2023-08-14,Active,22
+155,65,Bookkeeping 2025 Services,Bookkeeping,Fixed,226,38646,2025-08-05,On Hold,18
+156,65,Bookkeeping 2024 Services,Bookkeeping,Fixed,207,44505,2024-11-28,On Hold,19
+157,66,CAS 2024 Services,CAS,Fixed,195,34905,2024-03-07,Active,8
+158,67,Audit 2026 Engagement,Audit,Fixed,218,48178,2026-03-31,Active,18
+159,68,Bookkeeping 2025 Services,Bookkeeping,Fixed,239,59989,2025-03-10,Active,10
+160,68,Tax 2024 Return,Tax,Hourly,144,,2024-04-20,Closed,17
+161,68,CAS 2025 Services,CAS,Fixed,149,35462,2025-01-26,Closed,12
+162,69,Advisory 2026 Services,Advisory,Fixed,289,74273,2026-08-15,Active,10
+163,69,Audit 2025 Engagement,Audit,Hourly,147,,2025-05-29,Active,8
+164,69,Tax 2024 Return,Tax,Fixed,81,19683,2024-11-22,Active,19
+165,70,Tax 2025 Return,Tax,Fixed,37,8140,2025-08-05,Active,24
+166,70,Bookkeeping 2025 Services,Bookkeeping,Fixed,181,29684,2025-09-07,Active,13
+167,70,Tax 2026 Return,Tax,Hourly,57,,2026-01-19,Closed,20
+168,70,CAS 2023 Services,CAS,Fixed,80,13360,2023-11-19,Closed,24
+169,70,CAS 2025 Services,CAS,Fixed,91,22841,2025-12-11,Closed,7
+170,71,Bookkeeping 2024 Services,Bookkeeping,Fixed,67,11390,2024-01-30,Active,12
+171,71,Advisory 2026 Services,Advisory,Fixed,295,50740,2026-05-10,Active,11
+172,72,CAS 2024 Services,CAS,Fixed,299,53222,2024-12-07,Closed,15
+173,72,Tax 2023 Return,Tax,Hourly,183,,2023-12-20,Active,18
+174,73,CAS 2024 Services,CAS,Fixed,171,44118,2024-12-22,On Hold,17
+175,73,Advisory 2026 Services,Advisory,Hourly,54,,2026-02-24,Active,10
+176,74,Tax 2025 Return,Tax,Hourly,153,,2025-12-16,Active,13
+177,74,CAS 2023 Services,CAS,Fixed,256,64768,2023-09-25,Closed,21
+178,75,CAS 2024 Services,CAS,Fixed,225,46575,2024-01-07,Active,22
+179,75,Audit 2026 Engagement,Audit,Fixed,513,132867,2026-05-04,Active,19
+180,75,CAS 2026 Services,CAS,Fixed,90,13950,2026-03-11,Closed,9
+181,76,Audit 2024 Engagement,Audit,Hourly,311,,2024-12-02,Active,21
+182,76,Tax 2024 Return,Tax,Fixed,172,37668,2024-05-22,On Hold,15
+183,76,Advisory 2026 Services,Advisory,Fixed,100,18100,2026-02-15,Active,20
+184,77,Bookkeeping 2024 Services,Bookkeeping,Fixed,42,6636,2024-03-04,Active,11
+185,77,CAS 2026 Services,CAS,Fixed,276,51336,2026-04-21,Active,18
+186,78,Bookkeeping 2025 Services,Bookkeeping,Fixed,280,47040,2025-12-03,Active,7
+187,78,Bookkeeping 2025 Services,Bookkeeping,Fixed,143,26884,2025-08-20,Active,8
+188,79,Audit 2023 Engagement,Audit,Hourly,447,,2023-07-14,Active,16
+189,79,Tax 2024 Return,Tax,Fixed,79,18407,2024-01-17,On Hold,9
+190,79,Audit 2025 Engagement,Audit,Hourly,533,,2025-01-03,Active,8
+191,80,Advisory 2026 Services,Advisory,Hourly,176,,2026-08-16,Active,12
+192,80,Audit 2024 Engagement,Audit,Fixed,505,92920,2024-04-04,On Hold,14
+193,80,Advisory 2025 Services,Advisory,Fixed,261,53244,2025-03-24,Active,23
+194,81,CAS 2023 Services,CAS,Fixed,34,6834,2023-12-23,Active,16
+195,82,Advisory 2024 Services,Advisory,Fixed,35,7595,2024-07-31,Active,12
+196,82,Advisory 2026 Services,Advisory,Fixed,31,5642,2026-01-08,On Hold,20
+197,83,Advisory 2023 Services,Advisory,Fixed,257,58082,2023-10-07,Closed,7
+198,83,Advisory 2026 Services,Advisory,Fixed,140,21000,2026-08-17,Active,21
+199,83,CAS 2025 Services,CAS,Fixed,261,67077,2025-02-15,Active,17
+200,84,Tax 2024 Return,Tax,Hourly,64,,2024-08-09,On Hold,12
+201,85,Bookkeeping 2025 Services,Bookkeeping,Fixed,286,72072,2025-05-30,On Hold,7
+202,86,Advisory 2025 Services,Advisory,Fixed,131,33012,2025-09-06,Active,7
+203,87,Advisory 2023 Services,Advisory,Fixed,225,52425,2023-08-18,Active,14
+204,87,CAS 2026 Services,CAS,Fixed,100,15800,2026-04-07,Active,18
+205,87,Audit 2026 Engagement,Audit,Hourly,392,,2026-06-27,Active,20
+206,88,Advisory 2024 Services,Advisory,Hourly,246,,2024-12-07,On Hold,10
+207,88,Audit 2024 Engagement,Audit,Fixed,275,67100,2024-09-16,Active,21
+208,88,Bookkeeping 2023 Services,Bookkeeping,Fixed,217,37324,2023-08-19,Closed,8
+209,89,Advisory 2023 Services,Advisory,Fixed,208,37440,2023-10-02,Closed,20
+210,89,Bookkeeping 2024 Services,Bookkeeping,Fixed,122,24034,2024-10-28,Active,23
+211,89,CAS 2025 Services,CAS,Fixed,198,44748,2025-11-11,Active,20
+212,90,CAS 2025 Services,CAS,Fixed,257,42405,2025-03-31,Active,18
+213,90,Audit 2024 Engagement,Audit,Hourly,548,,2024-06-14,Active,19
+214,91,CAS 2026 Services,CAS,Fixed,252,38808,2026-04-23,Active,11
+215,91,CAS 2024 Services,CAS,Fixed,166,34196,2024-08-31,Active,20
+216,92,CAS 2025 Services,CAS,Fixed,72,11952,2025-09-14,Active,21
+217,92,CAS 2023 Services,CAS,Fixed,294,63210,2023-09-29,Closed,16
+218,93,Bookkeeping 2024 Services,Bookkeeping,Fixed,280,43960,2024-01-16,Active,18
+219,93,Advisory 2024 Services,Advisory,Hourly,200,,2024-08-25,On Hold,21
+220,93,CAS 2024 Services,CAS,Fixed,88,15048,2024-03-07,Active,17
+221,94,Audit 2025 Engagement,Audit,Fixed,380,87020,2025-08-02,Active,10
+222,94,Bookkeeping 2025 Services,Bookkeeping,Fixed,65,10920,2025-12-20,Active,9
+223,94,Bookkeeping 2025 Services,Bookkeeping,Fixed,108,20412,2025-03-18,Active,13
+224,95,CAS 2023 Services,CAS,Fixed,264,60192,2023-08-17,Closed,10
+225,96,Advisory 2025 Services,Advisory,Fixed,207,47196,2025-05-03,Active,23
+226,96,Bookkeeping 2025 Services,Bookkeeping,Fixed,42,7350,2025-02-26,Active,24
+227,96,Advisory 2026 Services,Advisory,Fixed,116,25056,2026-07-27,On Hold,16
+228,96,Advisory 2024 Services,Advisory,Fixed,253,63250,2024-01-22,Active,11
+229,96,Advisory 2025 Services,Advisory,Fixed,251,54216,2025-08-08,Active,23
+230,97,CAS 2024 Services,CAS,Fixed,122,19886,2024-07-11,On Hold,10
+231,98,CAS 2024 Services,CAS,Fixed,174,45240,2024-04-05,On Hold,12
+232,98,Audit 2023 Engagement,Audit,Hourly,157,,2023-06-16,Active,20
+233,98,Audit 2025 Engagement,Audit,Fixed,584,104536,2025-04-12,Closed,23
+234,99,Tax 2023 Return,Tax,Hourly,113,,2023-07-29,Active,13
+235,99,Tax 2024 Return,Tax,Hourly,113,,2024-12-12,Closed,19
+236,99,Tax 2024 Return,Tax,Hourly,105,,2024-06-30,Closed,15
+237,100,Bookkeeping 2024 Services,Bookkeeping,Fixed,197,47674,2024-06-07,Active,9
+238,100,Audit 2023 Engagement,Audit,Hourly,181,,2023-09-05,Active,12
+239,101,Advisory 2025 Services,Advisory,Fixed,43,6665,2025-10-29,Active,24
+240,101,Tax 2025 Return,Tax,Fixed,117,29484,2025-07-25,Closed,9
+241,102,CAS 2025 Services,CAS,Fixed,45,7110,2025-10-22,Active,24
+242,102,Tax 2024 Return,Tax,Fixed,158,28914,2024-05-30,Active,9
+243,102,CAS 2026 Services,CAS,Fixed,66,11022,2026-08-20,Active,7
+244,103,Audit 2023 Engagement,Audit,Fixed,192,41664,2023-11-29,Active,21
+245,104,CAS 2024 Services,CAS,Fixed,299,62790,2024-01-16,Closed,24
+246,105,Bookkeeping 2025 Services,Bookkeeping,Fixed,286,54054,2025-04-30,Active,14
+247,106,Bookkeeping 2026 Services,Bookkeeping,Fixed,132,25872,2026-01-16,Closed,12
+248,106,Tax 2025 Return,Tax,Hourly,88,,2025-09-24,Active,12
+249,106,Bookkeeping 2023 Services,Bookkeeping,Fixed,292,63364,2023-10-10,Active,16
+250,107,Audit 2024 Engagement,Audit,Hourly,157,,2024-03-29,Closed,22
+251,108,Advisory 2025 Services,Advisory,Fixed,234,54054,2025-12-06,Active,10
+252,108,CAS 2024 Services,CAS,Fixed,32,7968,2024-09-14,Closed,15
+253,109,Tax 2026 Return,Tax,Hourly,76,,2026-04-04,Active,16
+254,109,Audit 2026 Engagement,Audit,Hourly,591,,2026-04-25,Active,15
+255,110,Tax 2024 Return,Tax,Fixed,42,7854,2024-03-12,Closed,10
+256,111,Tax 2024 Return,Tax,Fixed,94,19834,2024-01-12,Active,24
+257,112,CAS 2023 Services,CAS,Fixed,180,41220,2023-09-09,Closed,14
+258,112,Bookkeeping 2025 Services,Bookkeeping,Fixed,267,52599,2025-08-25,On Hold,7
+259,112,Tax 2024 Return,Tax,Fixed,197,33490,2024-08-25,Active,22
+260,112,Tax 2025 Return,Tax,Fixed,195,50310,2025-02-07,Active,15
+261,113,Tax 2025 Return,Tax,Hourly,97,,2025-12-28,Active,15
+262,113,CAS 2024 Services,CAS,Fixed,88,18392,2024-11-11,On Hold,10
+263,114,CAS 2025 Services,CAS,Fixed,233,47765,2025-07-23,On Hold,11
+264,114,Tax 2025 Return,Tax,Hourly,191,,2025-02-18,Active,14
+265,115,Tax 2025 Return,Tax,Hourly,62,,2025-03-13,On Hold,16
+266,115,CAS 2025 Services,CAS,Fixed,269,45730,2025-09-26,Active,15
+267,116,Tax 2026 Return,Tax,Hourly,166,,2026-07-27,Closed,21
+268,117,Audit 2025 Engagement,Audit,Hourly,382,,2025-05-24,On Hold,10
+269,117,Advisory 2025 Services,Advisory,Hourly,71,,2025-10-16,On Hold,19
+270,117,Audit 2026 Engagement,Audit,Hourly,525,,2026-08-01,Active,16
+271,117,Advisory 2024 Services,Advisory,Fixed,118,27376,2024-12-26,Active,16
+272,117,Tax 2025 Return,Tax,Fixed,158,27650,2025-05-06,Closed,20
+273,118,Bookkeeping 2024 Services,Bookkeeping,Fixed,170,28730,2024-02-25,Active,10
+274,118,Advisory 2026 Services,Advisory,Hourly,205,,2026-08-09,Active,20
+275,118,Audit 2023 Engagement,Audit,Hourly,334,,2023-06-22,On Hold,10
+276,119,CAS 2023 Services,CAS,Fixed,262,48208,2023-09-25,Active,15
+277,120,Advisory 2023 Services,Advisory,Fixed,268,58156,2023-08-07,Active,8
+278,120,CAS 2024 Services,CAS,Fixed,299,50531,2024-02-25,Active,14
+279,120,Audit 2025 Engagement,Audit,Fixed,138,33120,2025-11-25,Active,18
+280,121,Audit 2024 Engagement,Audit,Hourly,570,,2024-07-12,Active,9
+281,121,Advisory 2025 Services,Advisory,Fixed,188,37412,2025-02-04,On Hold,21
+282,122,Advisory 2024 Services,Advisory,Fixed,133,29526,2024-06-08,Active,10
+283,122,Tax 2024 Return,Tax,Hourly,46,,2024-05-16,On Hold,17
+284,123,Audit 2024 Engagement,Audit,Fixed,389,73132,2024-04-12,On Hold,17
+285,123,Audit 2024 Engagement,Audit,Fixed,376,63544,2024-07-06,Closed,20
+286,123,Tax 2023 Return,Tax,Hourly,179,,2023-07-28,Active,10
+287,123,Tax 2025 Return,Tax,Hourly,21,,2025-03-25,Active,13
+288,124,Bookkeeping 2023 Services,Bookkeeping,Fixed,229,43968,2023-07-23,Active,15
+289,125,Tax 2025 Return,Tax,Fixed,49,10731,2025-05-05,On Hold,22
+290,125,CAS 2026 Services,CAS,Fixed,45,10935,2026-08-11,Closed,21
+291,126,Tax 2025 Return,Tax,Fixed,116,18444,2025-07-23,Active,11
+292,126,CAS 2023 Services,CAS,Fixed,174,32538,2023-12-17,Active,12
+293,127,Audit 2024 Engagement,Audit,Fixed,161,40894,2024-12-25,Closed,22
+294,127,Audit 2025 Engagement,Audit,Fixed,273,42315,2025-11-28,On Hold,8
+295,128,Advisory 2026 Services,Advisory,Hourly,95,,2026-06-30,Active,24
+296,129,Advisory 2026 Services,Advisory,Fixed,228,34656,2026-01-25,On Hold,15
+297,129,Tax 2026 Return,Tax,Fixed,25,4475,2026-05-20,On Hold,22
+298,130,Advisory 2024 Services,Advisory,Fixed,251,62499,2024-09-29,Active,24
+299,131,Advisory 2024 Services,Advisory,Fixed,205,49200,2024-08-23,Active,23
+300,131,Advisory 2025 Services,Advisory,Fixed,113,28815,2025-05-02,Active,13
+301,131,Tax 2026 Return,Tax,Hourly,200,,2026-08-29,Active,22
+302,131,Bookkeeping 2025 Services,Bookkeeping,Fixed,145,26535,2025-09-06,Active,23
+303,131,Bookkeeping 2025 Services,Bookkeeping,Fixed,174,26448,2025-12-07,Active,18
+304,132,Tax 2025 Return,Tax,Fixed,80,18800,2025-05-20,Closed,12
+305,132,Advisory 2024 Services,Advisory,Hourly,144,,2024-05-03,Closed,9
+306,133,CAS 2025 Services,CAS,Fixed,68,15640,2025-12-05,Closed,11
+307,133,Tax 2025 Return,Tax,Fixed,53,11660,2025-12-15,On Hold,9
+308,134,Audit 2026 Engagement,Audit,Fixed,482,107004,2026-04-29,Active,14
+309,134,Bookkeeping 2025 Services,Bookkeeping,Fixed,163,29177,2025-06-10,On Hold,8
+310,134,CAS 2025 Services,CAS,Fixed,228,41268,2025-01-25,Active,12
+311,135,Bookkeeping 2023 Services,Bookkeeping,Fixed,78,13182,2023-10-08,On Hold,9
+312,136,Advisory 2026 Services,Advisory,Hourly,93,,2026-07-20,Closed,24
+313,136,Bookkeeping 2025 Services,Bookkeeping,Fixed,282,52452,2025-09-25,Active,14
+314,136,Audit 2023 Engagement,Audit,Hourly,250,,2023-12-23,Active,22
+315,136,Bookkeeping 2025 Services,Bookkeeping,Fixed,183,27450,2025-08-19,Active,17
+316,136,Advisory 2023 Services,Advisory,Fixed,102,20502,2023-09-02,On Hold,15
+317,137,Advisory 2024 Services,Advisory,Fixed,253,51359,2024-12-15,Active,16
+318,137,Advisory 2024 Services,Advisory,Fixed,115,24265,2024-09-15,Active,13
+319,137,Tax 2025 Return,Tax,Hourly,96,,2025-09-10,Closed,16
+320,138,Advisory 2026 Services,Advisory,Fixed,111,26085,2026-01-18,Active,9
+321,138,Bookkeeping 2026 Services,Bookkeeping,Fixed,238,49980,2026-01-15,Closed,24
+322,139,Tax 2023 Return,Tax,Fixed,46,10718,2023-11-04,Closed,12
+323,139,Bookkeeping 2025 Services,Bookkeeping,Fixed,118,18408,2025-07-28,Closed,22
+324,140,CAS 2025 Services,CAS,Fixed,91,19838,2025-04-07,On Hold,16
+325,140,Advisory 2024 Services,Advisory,Hourly,149,,2024-08-31,Active,22
+326,141,Advisory 2025 Services,Advisory,Hourly,248,,2025-09-14,Active,7
+327,141,CAS 2023 Services,CAS,Fixed,156,36660,2023-10-01,Active,23
+328,142,CAS 2023 Services,CAS,Fixed,127,23368,2023-11-13,Active,9
+329,142,Bookkeeping 2024 Services,Bookkeeping,Fixed,231,39963,2024-11-11,Active,7
+330,142,Audit 2024 Engagement,Audit,Hourly,348,,2024-12-24,On Hold,19
+331,142,Advisory 2023 Services,Advisory,Fixed,131,25414,2023-11-26,Closed,11
+332,143,Advisory 2023 Services,Advisory,Hourly,173,,2023-09-04,Active,23
+333,144,CAS 2025 Services,CAS,Fixed,242,42592,2025-05-03,On Hold,10
+334,144,CAS 2024 Services,CAS,Fixed,46,8050,2024-02-25,Active,15
+335,144,Advisory 2026 Services,Advisory,Fixed,203,52780,2026-09-07,Active,8
+336,145,Tax 2025 Return,Tax,Hourly,104,,2025-01-23,Closed,10
+337,145,Bookkeeping 2024 Services,Bookkeeping,Fixed,197,32899,2024-01-17,Closed,21
+338,146,Audit 2024 Engagement,Audit,Hourly,518,,2024-10-25,Active,18
+339,147,Bookkeeping 2026 Services,Bookkeeping,Fixed,149,33972,2026-04-08,On Hold,22
+340,147,CAS 2025 Services,CAS,Fixed,257,60395,2025-10-29,Active,14
+341,147,Audit 2025 Engagement,Audit,Hourly,542,,2025-06-01,Active,11
+342,148,Advisory 2025 Services,Advisory,Hourly,283,,2025-10-12,Active,23
+343,148,Audit 2025 Engagement,Audit,Fixed,447,75990,2025-04-15,Active,8
+344,148,Tax 2025 Return,Tax,Hourly,138,,2025-10-01,On Hold,15
+345,148,Advisory 2023 Services,Advisory,Fixed,111,19425,2023-12-10,Closed,11
+346,148,Bookkeeping 2024 Services,Bookkeeping,Fixed,292,73000,2024-07-03,On Hold,20
+347,149,Advisory 2024 Services,Advisory,Hourly,40,,2024-02-24,Closed,8
+348,149,Audit 2025 Engagement,Audit,Fixed,251,43925,2025-08-11,Active,17
+349,149,Tax 2025 Return,Tax,Hourly,25,,2025-04-18,Active,13
+350,149,Tax 2024 Return,Tax,Hourly,140,,2024-01-12,On Hold,11
+351,150,Bookkeeping 2024 Services,Bookkeeping,Fixed,232,59392,2024-04-06,Closed,15
+352,150,Tax 2025 Return,Tax,Fixed,28,7196,2025-06-18,Active,20
+353,150,Tax 2026 Return,Tax,Hourly,51,,2026-05-21,Active,23
+354,151,Advisory 2023 Services,Advisory,Fixed,59,12331,2023-08-31,Active,9
+355,151,Audit 2025 Engagement,Audit,Fixed,121,23837,2025-12-06,On Hold,7
+356,151,CAS 2025 Services,CAS,Fixed,265,62275,2025-01-22,On Hold,20
+357,152,Audit 2023 Engagement,Audit,Fixed,251,53463,2023-12-14,Closed,10
+358,153,Advisory 2025 Services,Advisory,Fixed,156,34476,2025-03-14,Closed,22
+359,154,CAS 2025 Services,CAS,Fixed,242,44044,2025-08-17,Active,14
+360,154,Advisory 2026 Services,Advisory,Hourly,241,,2026-04-08,Active,24
+361,154,Audit 2024 Engagement,Audit,Hourly,508,,2024-03-29,Active,22
+362,155,Bookkeeping 2024 Services,Bookkeeping,Fixed,275,55000,2024-09-17,Active,9
+363,155,CAS 2026 Services,CAS,Fixed,272,60384,2026-01-26,Active,24
+364,156,CAS 2026 Services,CAS,Fixed,60,13860,2026-03-16,Closed,13
+365,157,CAS 2026 Services,CAS,Fixed,180,33120,2026-04-19,Active,8
+366,157,Bookkeeping 2023 Services,Bookkeeping,Fixed,197,32899,2023-12-06,Closed,12
+367,157,Audit 2024 Engagement,Audit,Fixed,146,33288,2024-09-28,Active,11
+368,158,Bookkeeping 2023 Services,Bookkeeping,Fixed,148,23384,2023-12-01,Active,21
+369,158,Bookkeeping 2026 Services,Bookkeeping,Fixed,108,25488,2026-05-25,Active,13
+370,158,Bookkeeping 2025 Services,Bookkeeping,Fixed,243,52974,2025-11-03,On Hold,12
+371,159,CAS 2025 Services,CAS,Fixed,83,15687,2025-05-25,Closed,14
+372,159,CAS 2026 Services,CAS,Fixed,126,29862,2026-03-12,Closed,23
+373,159,Bookkeeping 2024 Services,Bookkeeping,Fixed,244,38796,2024-03-12,Closed,22
+374,159,Tax 2025 Return,Tax,Hourly,44,,2025-06-11,Active,18
+375,160,Tax 2025 Return,Tax,Hourly,111,,2025-01-22,Active,11
+376,160,Audit 2026 Engagement,Audit,Fixed,328,52808,2026-08-20,Active,19
+377,160,Advisory 2025 Services,Advisory,Fixed,249,44322,2025-06-24,Active,20
+378,161,CAS 2024 Services,CAS,Fixed,269,65905,2024-04-19,On Hold,19
+379,162,Audit 2024 Engagement,Audit,Hourly,314,,2024-03-12,Active,18
+380,162,Bookkeeping 2024 Services,Bookkeeping,Fixed,295,54280,2024-12-21,Active,12
+381,162,Audit 2025 Engagement,Audit,Fixed,127,24003,2025-06-29,Closed,11
+382,163,Audit 2024 Engagement,Audit,Fixed,524,95368,2024-10-13,Closed,11
+383,163,Audit 2026 Engagement,Audit,Fixed,237,38631,2026-02-01,Closed,22
+384,164,Advisory 2025 Services,Advisory,Hourly,170,,2025-08-28,Closed,9
+385,164,CAS 2024 Services,CAS,Fixed,200,44000,2024-11-17,Active,24
+386,165,CAS 2024 Services,CAS,Fixed,147,26754,2024-10-18,Closed,10
+387,166,CAS 2025 Services,CAS,Fixed,251,51957,2025-12-20,Closed,16
+388,167,Advisory 2026 Services,Advisory,Hourly,167,,2026-07-20,Active,14
+389,168,Bookkeeping 2024 Services,Bookkeeping,Fixed,130,32240,2024-01-07,Active,17
+390,168,CAS 2025 Services,CAS,Fixed,284,51972,2025-12-18,Active,16
+391,169,Audit 2024 Engagement,Audit,Fixed,212,46216,2024-03-30,Closed,16
+392,169,Bookkeeping 2024 Services,Bookkeeping,Fixed,30,6930,2024-05-20,Active,8
+393,169,Tax 2026 Return,Tax,Fixed,176,42944,2026-03-04,Active,24
+394,169,Advisory 2024 Services,Advisory,Fixed,108,21168,2024-10-12,On Hold,12
+395,169,CAS 2023 Services,CAS,Fixed,110,18370,2023-08-30,Closed,17
+396,170,Bookkeeping 2024 Services,Bookkeeping,Fixed,230,45770,2024-01-17,Closed,24
+397,170,Advisory 2026 Services,Advisory,Fixed,79,15326,2026-04-17,Closed,11
+398,171,CAS 2025 Services,CAS,Fixed,109,18748,2025-12-22,Closed,23
+399,171,Bookkeeping 2026 Services,Bookkeeping,Fixed,33,5544,2026-05-15,Active,15
+400,172,CAS 2023 Services,CAS,Fixed,263,61016,2023-11-05,Active,10
+401,172,Audit 2024 Engagement,Audit,Hourly,214,,2024-12-13,Active,13
+402,172,Tax 2024 Return,Tax,Fixed,119,26537,2024-04-01,On Hold,23
+403,172,Audit 2024 Engagement,Audit,Fixed,542,89430,2024-04-21,On Hold,19
+404,172,Tax 2025 Return,Tax,Fixed,132,20328,2025-01-23,Active,8
+405,173,Bookkeeping 2023 Services,Bookkeeping,Fixed,248,46624,2023-08-18,Active,18
+406,173,Bookkeeping 2026 Services,Bookkeeping,Fixed,107,23968,2026-04-03,Active,14
+407,174,Audit 2025 Engagement,Audit,Hourly,435,,2025-08-06,Closed,17
+408,174,Audit 2023 Engagement,Audit,Hourly,537,,2023-10-08,On Hold,20
+409,174,Bookkeeping 2024 Services,Bookkeeping,Fixed,152,32984,2024-10-19,Active,10
+410,174,CAS 2024 Services,CAS,Fixed,296,61272,2024-04-21,Closed,11
+411,175,Advisory 2025 Services,Advisory,Hourly,34,,2025-10-16,Closed,12
+412,175,Audit 2026 Engagement,Audit,Hourly,211,,2026-07-23,On Hold,9
+413,175,Bookkeeping 2023 Services,Bookkeeping,Fixed,123,20295,2023-07-09,On Hold,16
+414,176,Bookkeeping 2025 Services,Bookkeeping,Fixed,221,51714,2025-08-27,On Hold,22
+415,177,Advisory 2025 Services,Advisory,Hourly,293,,2025-08-11,Closed,22
+416,177,CAS 2025 Services,CAS,Fixed,115,28405,2025-11-04,On Hold,22
+417,178,Audit 2024 Engagement,Audit,Hourly,339,,2024-12-23,Active,8
+418,178,CAS 2023 Services,CAS,Fixed,113,20227,2023-11-21,Closed,17
+419,179,Tax 2024 Return,Tax,Hourly,92,,2024-05-26,Active,13
+420,180,Bookkeeping 2024 Services,Bookkeeping,Fixed,213,34293,2024-11-13,Closed,15
+421,180,Bookkeeping 2025 Services,Bookkeeping,Fixed,33,5610,2025-01-03,Active,10
