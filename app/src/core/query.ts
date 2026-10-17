@@ -58,6 +58,14 @@ export interface Sort {
   dir: 'asc' | 'desc'
 }
 
+/** Period-over-period comparison, anchored on the report's date filter. */
+export type ComparePeriod = 'previous_period' | 'previous_year'
+
+export const COMPARE_OPTIONS: { value: ComparePeriod; label: string }[] = [
+  { value: 'previous_period', label: 'Previous period' },
+  { value: 'previous_year', label: 'Same period last year' },
+]
+
 export interface QuerySpec {
   /** Dimension refs, e.g. "clients.name", "invoices.issued_at__month". */
   dimensions: string[]
@@ -66,6 +74,12 @@ export interface QuerySpec {
   filters: Filter[]
   sorts: Sort[]
   limit?: number
+  /**
+   * When set, every number is also computed for the comparison period and the
+   * report gains "prior", "change" and "change %" columns. Requires a date
+   * filter (relative or between) to anchor the period.
+   */
+  compare?: ComparePeriod
 }
 
 export const emptyQuery = (): QuerySpec => ({ dimensions: [], measures: [], filters: [], sorts: [], limit: 500 })

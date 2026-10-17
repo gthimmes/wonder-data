@@ -30,7 +30,7 @@ describe('templates', () => {
       const rows = reader.getRowObjectsJson()
       expect(rows.length, `${t.name} returned no rows on the sample data`).toBeGreaterThan(0)
       // every requested field shows up as a column
-      expect(compiled.columns.length).toBe(t.query.dimensions.length + t.query.measures.length)
+      expect(compiled.columns.length).toBe(t.query.dimensions.length + t.query.measures.length * (t.query.compare ? 4 : 1))
       // sort field is in the report
       for (const s of t.query.sorts) expect(compiled.columns.some((c) => c.ref === s.field)).toBe(true)
     })

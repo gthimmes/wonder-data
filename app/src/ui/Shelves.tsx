@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { describeFilter, grainLabel } from '../core/compiler'
 import { resolveRelativeDate } from '../core/dates'
 import { findDimension, findMeasure, findMetric, TIME_GRAINS, type TimeGrain } from '../core/model'
-import { grainOf, stripGrain, type Filter, type RelativeDate } from '../core/query'
+import { COMPARE_OPTIONS, grainOf, stripGrain, type ComparePeriod, type Filter, type RelativeDate } from '../core/query'
 import { FilterEditor } from './FilterEditor'
 import { useStore } from './store'
 
@@ -31,7 +31,18 @@ export function Shelves() {
   const removeMeasure = useStore((s) => s.removeMeasure)
   const removeFilter = useStore((s) => s.removeFilter)
   const setSort = useStore((s) => s.setSort)
+  const setCompare = useStore((s) => s.setCompare)
   const [editing, setEditing] = useState<{ index: number | null; filter?: Filter } | null>(null)
+
+  // A comparison needs a date range to anchor on: a relative or between filter on a date field.
+  const hasDateAnchor = query.filters.some((f) => {
+    if (f.op !== 'relative_date' && f.op !== 'between') return false
+    try {
+      return findDimension(model, f.field).dim.type === 'date'
+    } catch {
+      return false
+    }
+  })
 
   const sort = query.sorts[0]
   const sortButton = (ref: string) => {
@@ -103,6 +114,15 @@ export function Shelves() {
           </span>
         ))}
         <button className="addbtn" onClick={() => setEditing({ index: null })}>+ Add filter</button>
+        <span className="compare" title={hasDateAnchor ? 'Add prior-period columns for every number' : 'Add a date filter first (for example "Invoice Date is in last quarter") to compare periods'}>
+          <span className="shelf-label" style={{ width: 'auto', marginLeft: 12 }}>Compare with</span>
+          <select value={query.compare ?? ''} disabled={!hasDateAnchor && !query.compare} onChange={(e) => setCompare((e.target.value || undefined) as ComparePeriod | undefined)}>
+            <option value="">Nothing</option>
+            {COMPARE_OPTIONS.map((o) => (
+              <option key={o.value} value={o.value}>{o.label}</option>
+            ))}
+          </select>
+        </span>
         {editing && (
           <div style={{ position: 'absolute', top: '100%', left: 80 }}>
             <FilterEditor index={editing.index} initial={editing.filter} onClose={() => setEditing(null)} />

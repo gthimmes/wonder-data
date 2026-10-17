@@ -102,3 +102,39 @@ export function previousPeriod(range: DateRange): DateRange {
   const days = Math.round((e.getTime() - s.getTime()) / 86400000)
   return { start: iso(addDays(s, -days)), end: iso(s) }
 }
+
+/** The same range one year earlier, for same-period-last-year comparison. */
+export function previousYear(range: DateRange): DateRange {
+  const shift = (d: string) => {
+    const x = new Date(d + 'T00:00:00Z')
+    return iso(utc(x.getUTCFullYear() - 1, x.getUTCMonth(), x.getUTCDate()))
+  }
+  return { start: shift(range.start), end: shift(range.end) }
+}
+
+/** Add days to an ISO date. */
+export function addDaysIso(d: string, n: number): string {
+  return iso(addDays(new Date(d + 'T00:00:00Z'), n))
+}
+
+/**
+ * How far the comparison period must be moved forward to line up with the
+ * current one, so "Oct 2025" lands on the "Oct 2026" row. Whole-month ranges
+ * shift by months (so a 28-day February lines up with a 31-day March);
+ * anything else shifts by days.
+ */
+export interface PeriodShift {
+  unit: 'day' | 'month'
+  n: number
+}
+
+export function shiftBetween(from: DateRange, to: DateRange): PeriodShift {
+  const d = (s: string) => new Date(s + 'T00:00:00Z')
+  const wholeMonths = [from.start, from.end, to.start, to.end].every((s) => d(s).getUTCDate() === 1)
+  if (wholeMonths) {
+    const a = d(from.start)
+    const b = d(to.start)
+    return { unit: 'month', n: (b.getUTCFullYear() - a.getUTCFullYear()) * 12 + (b.getUTCMonth() - a.getUTCMonth()) }
+  }
+  return { unit: 'day', n: Math.round((d(to.start).getTime() - d(from.start).getTime()) / 86400000) }
+}

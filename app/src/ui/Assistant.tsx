@@ -28,10 +28,11 @@ type Backend = 'probing' | 'local' | 'key'
 const responseSchema = {
   type: 'object',
   additionalProperties: false,
-  required: ['kind', 'message', 'report', 'follow_ups'],
+  required: ['kind', 'message', 'title', 'report', 'follow_ups'],
   properties: {
     kind: { type: 'string', enum: ['report', 'question'], description: 'report when you can build it; question when you must ask the user something first.' },
     message: { type: 'string', description: 'For report: one plain sentence describing what you built, naming the fields. For question: the clarifying question, with the options you considered.' },
+    title: { type: 'string', description: 'For report: a short report name of at most six words, like "Unbilled WIP by Client". Empty string for a question.' },
     report: {
       type: 'object',
       additionalProperties: false,
@@ -65,6 +66,7 @@ const responseSchema = {
 type AssistantReply = {
   kind: 'report' | 'question'
   message: string
+  title: string
   report: {
     dimensions: string[]
     measures: string[]
@@ -200,6 +202,7 @@ export function Assistant() {
   const query = useStore((s) => s.query)
   const setQuery = useStore((s) => s.setQuery)
   const setChart = useStore((s) => s.setChart)
+  const setDraftTitle = useStore((s) => s.setDraftTitle)
   const toggle = useStore((s) => s.toggleAssistant)
   const [backend, setBackend] = useState<Backend>('probing')
   const [apiKey, setApiKey] = useState(() => {
@@ -278,6 +281,7 @@ export function Assistant() {
         }
         setQuery(q)
         setChart('auto')
+        if (reply.title.trim()) setDraftTitle(reply.title.trim())
       }
       setTurns([...history, { role: 'assistant', text: reply.message, reply }])
     } catch (e) {

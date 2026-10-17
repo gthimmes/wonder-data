@@ -64,14 +64,19 @@ function label(v: unknown, col: ColumnMeta): string {
  */
 export function buildSpec(type: Props['type'], columns: ColumnMeta[], rows: Record<string, unknown>[], width: number): VisualizationSpec {
   const dims = columns.filter((c) => c.kind === 'dimension')
-  const measures = columns.filter((c) => c.kind !== 'dimension')
+  // Only current-period numbers get panels; change columns stay in the table.
+  const measures = columns.filter((c) => c.kind !== 'dimension' && !c.role)
+  const prevOf = new Map(measures.map((m) => [m.key, columns.find((c) => c.ref === m.ref && c.role === 'previous')]))
   const dateDim = dims.find((d) => d.type === 'date')
   const x = type === 'pie' ? dims[0] : (dateDim ?? dims[0])
   const series = dims.find((d) => d !== x)
+  // With no series dimension, a period comparison becomes the series: this period vs prior.
+  const periodSeries = !series && type !== 'pie' && [...prevOf.values()].some(Boolean)
+  const PERIOD_LABELS = ['This period', 'Prior period']
 
   // Fold rows so each measure becomes its own panel: {x, series, measure, value}
   const data: Record<string, unknown>[] = []
-  const seriesSeen: string[] = []
+  const seriesSeen: string[] = periodSeries ? [...PERIOD_LABELS] : []
   const xSeen: string[] = []
   for (const r of rows) {
     const s = series ? label(r[series.key], series) : undefined
@@ -82,13 +87,10 @@ export function buildSpec(type: Props['type'], columns: ColumnMeta[], rows: Reco
     const xl = x ? label(r[x.key], x) : 'Total'
     if (!xSeen.includes(xl)) xSeen.push(xl)
     for (const m of measures) {
-      data.push({
-        x: x && x.type === 'date' ? r[x.key] : xl,
-        xLabel: xl,
-        series: s,
-        measure: m.label,
-        value: r[m.key] == null ? null : Number(r[m.key]),
-      })
+      const base = { x: x && x.type === 'date' ? r[x.key] : xl, xLabel: xl, measure: m.label }
+      data.push({ ...base, series: periodSeries ? PERIOD_LABELS[0] : s, value: r[m.key] == null ? null : Number(r[m.key]) })
+      const p = prevOf.get(m.key)
+      if (periodSeries && p) data.push({ ...base, series: PERIOD_LABELS[1], value: r[p.key] == null ? null : Number(r[p.key]) })
     }
   }
   if (series?.type === 'date') seriesSeen.sort()
@@ -102,13 +104,15 @@ export function buildSpec(type: Props['type'], columns: ColumnMeta[], rows: Reco
       : { field: 'x', type: 'nominal', title: x.label, sort: null, axis: { labelAngle: horizontal ? 0 : xSeen.length > 6 ? -35 : 0, labelLimit: horizontal ? 220 : 140, ...axisText } }
     : { field: 'x', type: 'nominal', title: null, axis: null }
 
-  const colorEnc = series
-    ? { field: 'series', type: 'nominal', title: series.label, scale: { domain: seriesSeen, range: SERIES.slice(0, seriesSeen.length) }, legend: { ...axisText } }
-    : { value: SERIES[0] }
+  const seriesTitle = series ? series.label : periodSeries ? 'Period' : undefined
+  const colorEnc =
+    series || periodSeries
+      ? { field: 'series', type: 'nominal', title: seriesTitle, scale: { domain: seriesSeen, range: periodSeries ? [SERIES[0], '#b8b6b1'] : SERIES.slice(0, seriesSeen.length) }, legend: { ...axisText } }
+      : { value: SERIES[0] }
 
   const tooltipBase = [
     ...(x ? [{ field: 'xLabel', title: x.label }] : []),
-    ...(series ? [{ field: 'series', title: series.label }] : []),
+    ...(series || periodSeries ? [{ field: 'series', title: seriesTitle }] : []),
   ]
 
   const panelHeight = horizontal ? Math.max(160, xSeen.length * (series ? seriesSeen.length * 14 + 8 : 22)) : measures.length > 1 ? 220 : 340
@@ -144,7 +148,7 @@ export function buildSpec(type: Props['type'], columns: ColumnMeta[], rows: Reco
         mark: barMark,
         encoding: {
           y: { ...xEnc, axis: { ...(xEnc.axis as object), labelAngle: 0 } },
-          yOffset: series ? { field: 'series' } : undefined,
+          yOffset: series || periodSeries ? { field: 'series' } : undefined,
           x: yEnc,
           color: colorEnc,
           tooltip: tt,
@@ -156,7 +160,7 @@ export function buildSpec(type: Props['type'], columns: ColumnMeta[], rows: Reco
       mark: barMark,
       encoding: {
         x: xEnc,
-        xOffset: series ? { field: 'series' } : undefined,
+        xOffset: series || periodSeries ? { field: 'series' } : undefined,
         y: yEnc,
         color: colorEnc,
         tooltip: tt,
@@ -214,7 +218,7 @@ export function Chart({ type, columns, rows }: Props) {
   }, [type, columns, rows, width])
 
   const dims = columns.filter((c) => c.kind === 'dimension')
-  const seriesDim = dims.find((d) => d.type === 'date') ? dims.find((d) => d.type !== 'date') : dims[1]
+  const seriesDim = type === 'pie' ? undefined : dims.find((d) => d.type === 'date') ? dims.find((d) => d.type !== 'date') : dims[1]
   const seriesCount = seriesDim ? new Set(rows.map((r) => String(r[seriesDim.key]))).size : 0
   return (
     <div className="chart-wrap">

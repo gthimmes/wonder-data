@@ -107,7 +107,7 @@ Dashboards with multiple tiles, scheduled email delivery, pivot (column) dimensi
 ## 7. Roadmap
 
 1. **v0 (this repo):** semantic model, compiler with tests, in-browser execution on a realistic sample dataset, builder UI with explain panel, templates, saved reports, CSV export, assistant.
-2. **v0.5:** period-over-period compare (previous period and same period last year as extra columns), drill to detail rows, column pivots, Excel export with formatting.
+2. **v0.5 (done except pivots):** period-over-period compare (previous period and same period last year as extra columns, anchored on the report's date filter, rows aligned by period), drill to detail rows (with an exact count and sum that reconcile to the cell), Excel export with formatting and a "How calculated" sheet. Column pivots remain.
 3. **v1:** multi-tile dashboards, scheduled delivery with per-recipient filters, server execution tier with row-level security, warehouse connectors (Snowflake, BigQuery, Postgres), model synonyms and certification badges, assistant feedback loop (admins see what users asked and promote verified intents).
 4. **v2:** model editing UI, Ossie/MetricFlow import, symmetric aggregates, embed SDK.
 

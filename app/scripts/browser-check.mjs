@@ -127,7 +127,80 @@ const ar = await page.$$eval('table.grid tbody tr td:first-child', (tds) => tds.
 check(ar.some((x) => /days|Current/.test(x ?? '')), `AR aging buckets: ${ar.join(', ')}`)
 await shot('ar-aging')
 
-// 8. (opt-in: --assistant) The assistant builds a report through the local Claude Code endpoint.
+// 8. Period comparison: template with compare, grouped headers, signed change cells, chart renders in WASM.
+await page.click('nav button:has-text("Templates")')
+await page.click('.card:has-text("Billing This Year vs Last Year")')
+await page.waitForFunction(() => document.querySelector('.summary')?.textContent?.includes('same period last year'))
+await page.waitForSelector('table.grid tbody tr', { timeout: 30000 })
+const groupHeads = await page.$$eval('table.grid th.group', (ths) => ths.map((t) => t.textContent))
+const subHeads = await page.$$eval('table.grid th.sub', (ths) => ths.map((t) => t.textContent))
+const toned = await page.$$eval('table.grid td.pos, table.grid td.neg', (tds) => tds.length)
+const cmpRows = await page.$$eval('table.grid tbody tr:not(.total)', (trs) => trs.length)
+check(groupHeads.join('|') === 'Total Billed|Number of Invoices' && subHeads.length === 8 && toned > 0 && cmpRows === 10, `compare: groups ${groupHeads.join(', ')}; ${subHeads.length} sub-headers; ${toned} signed cells; ${cmpRows} months`)
+await page.waitForSelector('.chart-wrap svg', { timeout: 20000 })
+const legend = await page.textContent('.chart-wrap svg')
+check(/This period/.test(legend ?? '') && /Prior period/.test(legend ?? ''), 'compare chart shows this vs prior period series')
+await page.waitForTimeout(300)
+await shot('compare')
+
+// 9. Compare select on an ordinary template, then switch it off again.
+await page.click('nav button:has-text("Templates")')
+await page.click('.card:has-text("Realization by Partner")')
+await page.waitForFunction(() => document.querySelector('.summary')?.textContent?.includes('Realization %'))
+await page.waitForSelector('table.grid tbody tr', { timeout: 30000 })
+check(!(await page.isDisabled('.shelf .compare select')), 'compare select enabled when a date filter exists')
+await page.selectOption('.shelf .compare select', 'previous_period')
+await page.waitForFunction(() => document.querySelector('.summary')?.textContent?.includes('previous period'))
+await page.waitForSelector('table.grid th.group', { timeout: 30000 })
+check((await page.$$eval('table.grid th.group', (t) => t.length)) === 3, 'three measure groups when comparing realization')
+await page.selectOption('.shelf .compare select', '')
+await page.waitForFunction(() => !document.querySelector('.summary')?.textContent?.includes('previous period'))
+await page.waitForSelector('table.grid tbody tr', { timeout: 30000 })
+check((await page.$$eval('table.grid th.group', (t) => t.length)) === 0, 'compare switched off restores plain columns')
+
+// 10. Drill to detail: click a row, records reconcile to the cell, switch measure tab, close.
+await page.click('table.grid tbody tr:not(.total) >> nth=0')
+await page.waitForSelector('.modal.detail', { timeout: 10000 })
+await page.waitForSelector('.modal .reconcile', { timeout: 30000 })
+const reconcile = await page.textContent('.modal .reconcile')
+const detailTitle = await page.textContent('.modal-head h3')
+check(/add up to/.test(reconcile ?? '') && (await page.$('.modal .reconcile.ok')) !== null, `drill: "${detailTitle}" — ${reconcile?.slice(0, 90)}`)
+const conditions = await page.$$eval('.modal .conditions li', (li) => li.map((x) => x.textContent))
+check(conditions.some((c) => /^Partner is "/.test(c ?? '')) && conditions.some((c) => /Invoice Date is in last 12 months/.test(c ?? '')), `drill conditions: ${conditions.join(' | ')}`)
+await shot('drill')
+await page.click('.modal-head .seg button:has-text("Total Billed")')
+await page.waitForFunction(() => document.querySelector('.modal-head h3')?.textContent?.includes('Invoices behind Total Billed'))
+await page.waitForSelector('.modal .reconcile.ok', { timeout: 30000 })
+check(true, `drill: switched to ${await page.textContent('.modal-head h3')} — ${(await page.textContent('.modal .reconcile'))?.slice(0, 80)}`)
+await page.keyboard.press('Escape')
+await page.waitForSelector('.modal.detail', { state: 'detached' })
+check(true, 'drill closes with Escape')
+
+// 11. Excel export builds a workbook in the browser bundle (exceljs browser build + both sheets).
+const buildXlsx = () => page.evaluate(async () => {
+  const { buildExcelBuffer } = await import('/src/core/excel.ts')
+  const { compile } = await import('/src/core/compiler.ts')
+  const { practiceModel } = await import('/src/data/practiceModel.ts')
+  const { runSql } = await import('/src/core/runtime.ts')
+  const { templates } = await import('/src/data/templates.ts')
+  const t = templates.find((x) => x.id === 'billing-vs-last-year')
+  const compiled = compile(practiceModel, t.query)
+  const result = await runSql(compiled.sql)
+  const buf = await buildExcelBuffer({ title: t.name, compiled, rows: result.rows })
+  return { bytes: buf.byteLength, rows: result.rowCount }
+})
+let xlsx
+try {
+  xlsx = await buildXlsx()
+} catch (e) {
+  // A cold dev server may discover a lazy dependency and reload the page once; the engine must boot again.
+  if (!/Execution context was destroyed/.test(String(e))) throw e
+  await page.waitForFunction(() => document.querySelector('.topbar .status')?.textContent?.includes('sample data'), null, { timeout: 90000 })
+  xlsx = await buildXlsx()
+}
+check(xlsx.bytes > 5000, `excel export: ${xlsx.bytes} bytes for ${xlsx.rows} rows`)
+
+// 12. (opt-in: --assistant) The assistant builds a report through the local Claude Code endpoint.
 //    Opt-in because it calls a model: slower, nondeterministic, and it spends the developer's quota.
 if (process.argv.includes('--assistant')) {
   const avail = await page.evaluate(() => fetch('/api/assistant').then((r) => r.json()).catch(() => ({ available: false })))

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { toCsv } from '../core/format'
 import { Assistant } from './Assistant'
 import { CHART_TYPES } from './chartType'
+import { DetailPanel } from './DetailPanel'
 import { ExplainPanel } from './ExplainPanel'
 import { FieldPicker } from './FieldPicker'
 import { ResultView } from './ResultView'
@@ -25,6 +26,7 @@ function Toolbar() {
   const [name, setName] = useState(currentReport?.name ?? '')
   const [copied, setCopied] = useState(false)
   const [savedFlash, setSavedFlash] = useState(false)
+  const [exporting, setExporting] = useState(false)
 
   // Keep the editable title in sync when a different report is loaded.
   const [lastId, setLastId] = useState(currentReport?.id)
@@ -33,16 +35,36 @@ function Toolbar() {
     setName(currentReport?.name ?? '')
   }
 
-  const exportCsv = () => {
-    if (!compiled || !result) return
-    const csv = toCsv(compiled.columns, result.rows)
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' })
+  const fileStem = () => (name || 'report').replace(/[^a-z0-9]+/gi, '-').toLowerCase()
+  const download = (blob: Blob, filename: string) => {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `${(name || 'report').replace(/[^a-z0-9]+/gi, '-').toLowerCase()}.csv`
+    a.download = filename
     a.click()
     URL.revokeObjectURL(url)
+  }
+
+  const exportCsv = () => {
+    if (!compiled || !result) return
+    download(new Blob([toCsv(compiled.columns, result.rows)], { type: 'text/csv;charset=utf-8' }), `${fileStem()}.csv`)
+  }
+
+  const exportExcel = async () => {
+    if (!compiled || !result || exporting) return
+    setExporting(true)
+    try {
+      const { buildExcelBuffer } = await import('../core/excel')
+      const buf = await buildExcelBuffer({
+        title: name || 'Untitled report',
+        compiled,
+        rows: result.rows,
+        link: `${location.origin}${location.pathname}#${hashForReport(query, chart)}`,
+      })
+      download(new Blob([buf], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }), `${fileStem()}.xlsx`)
+    } finally {
+      setExporting(false)
+    }
   }
 
   const share = async () => {
@@ -73,7 +95,10 @@ function Toolbar() {
         {savedFlash ? 'Saved ✓' : 'Save'}
       </button>
       <button className="btn" onClick={share} disabled={!compiled}>{copied ? 'Link copied ✓' : 'Share link'}</button>
-      <button className="btn" onClick={exportCsv} disabled={!result}>Export CSV</button>
+      <button className="btn" onClick={() => void exportExcel()} disabled={!result || exporting} title="Excel workbook with formatting, live totals and a 'How calculated' sheet">
+        {exporting ? <span className="spinner" /> : 'Export Excel'}
+      </button>
+      <button className="btn" onClick={exportCsv} disabled={!result}>CSV</button>
       <button className="btn" onClick={clear} title="Start a blank report">New</button>
       <span className="spacer" />
       <label style={{ fontSize: 12, color: 'var(--muted)' }}>
@@ -108,6 +133,7 @@ export function Builder() {
         <ResultView />
       </div>
       {assistantOpen ? <Assistant /> : explainOpen ? <ExplainPanel /> : <div className="rightpanel hidden" />}
+      <DetailPanel />
     </div>
   )
 }

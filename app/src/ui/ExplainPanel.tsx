@@ -44,11 +44,19 @@ export function ExplainPanel() {
               <p style={{ color: 'var(--muted)' }}>None. Every record is included.</p>
             )}
 
+            {compiled.explanation.compare && (
+              <>
+                <h4>Comparison</h4>
+                <p>{compiled.explanation.compare.description}</p>
+              </>
+            )}
+
             <h4>Guarantees</h4>
             <ul>
               <li>Each total is added up inside its own table before tables are combined, so joins can never double count.</li>
               <li>Ratios divide the totals, never average the rows.</li>
               <li>Relative dates are fixed to the exact range shown above when the report runs.</li>
+              <li>Click any row in the table to see the records behind it; they add up to the number shown.</li>
               {result && <li>Ran in {Math.round(result.elapsedMs)} ms on {result.rowCount.toLocaleString()} result rows.</li>}
             </ul>
 

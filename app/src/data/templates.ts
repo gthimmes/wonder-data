@@ -18,6 +18,21 @@ export interface ReportTemplate {
  */
 export const templates: ReportTemplate[] = [
   {
+    id: 'billing-vs-last-year',
+    name: 'Billing This Year vs Last Year',
+    description: 'Total billed by month, year to date, next to the same months last year with the change. The first question at every partner meeting.',
+    audience: 'Managing partner',
+    query: {
+      dimensions: ['invoices.issued_on__month'],
+      measures: ['invoices.billed', 'invoices.count'],
+      filters: [{ field: 'invoices.issued_on', op: 'relative_date', value: 'year_to_date' }],
+      sorts: [],
+      limit: 100,
+      compare: 'previous_year',
+    },
+    chart: 'bar',
+  },
+  {
     id: 'realization-by-partner',
     name: 'Realization by Partner',
     description: 'What each partner billed versus the standard value of the time their clients consumed, last 12 months.',

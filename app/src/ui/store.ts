@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { compile, type CompiledQuery } from '../core/compiler'
-import { emptyQuery, type Filter, type QuerySpec, type Sort } from '../core/query'
+import { emptyQuery, type ComparePeriod, type Filter, type QuerySpec, type Sort } from '../core/query'
 import { getDb, runSql, type ResultSet } from '../core/runtime'
 import { practiceModel } from '../data/practiceModel'
 import { templates } from '../data/templates'
@@ -16,6 +16,12 @@ export interface SavedReport {
 
 export type View = 'builder' | 'templates' | 'saved'
 
+/** A cell the user wants to see the records behind. */
+export interface Drill {
+  row: Record<string, unknown>
+  measureRef: string
+}
+
 interface State {
   model: typeof practiceModel
   view: View
@@ -30,6 +36,7 @@ interface State {
   dbError: string | null
   explainOpen: boolean
   assistantOpen: boolean
+  drill: Drill | null
   currentReport: { id: string; name: string } | null
   saved: SavedReport[]
 
@@ -45,9 +52,14 @@ interface State {
   removeFilter: (i: number) => void
   setSort: (s: Sort | null) => void
   setLimit: (n: number) => void
+  setCompare: (c: ComparePeriod | undefined) => void
   setChart: (c: ChartType | 'auto') => void
   toggleExplain: () => void
   toggleAssistant: () => void
+  openDrill: (d: Drill) => void
+  closeDrill: () => void
+  /** Give the current (unsaved) report a name, e.g. from the assistant. */
+  setDraftTitle: (name: string) => void
   clear: () => void
   loadTemplate: (id: string) => void
   loadSaved: (id: string) => void
@@ -100,9 +112,9 @@ export const useStore = create<State>((set, get) => {
   const recompile = (query: QuerySpec) => {
     try {
       const compiled = compile(get().model, query)
-      set({ query, compiled, compileError: null })
+      set({ query, compiled, compileError: null, drill: null })
     } catch (e) {
-      set({ query, compiled: null, compileError: (e as Error).message, result: null })
+      set({ query, compiled: null, compileError: (e as Error).message, result: null, drill: null })
     }
   }
   const update = (fn: (q: QuerySpec) => QuerySpec) => {
@@ -124,6 +136,7 @@ export const useStore = create<State>((set, get) => {
     dbError: null,
     explainOpen: false,
     assistantOpen: false,
+    drill: null,
     currentReport: null,
     saved: loadSavedReports(),
 
@@ -155,9 +168,19 @@ export const useStore = create<State>((set, get) => {
     removeFilter: (i) => update((q) => ({ ...q, filters: q.filters.filter((_, j) => j !== i) })),
     setSort: (s) => update((q) => ({ ...q, sorts: s ? [s] : [] })),
     setLimit: (n) => update((q) => ({ ...q, limit: n })),
+    setCompare: (compare) =>
+      update((q) => {
+        const next = { ...q }
+        if (compare) next.compare = compare
+        else delete next.compare
+        return next
+      }),
     setChart: (chart) => set({ chart }),
-    toggleExplain: () => set((s) => ({ explainOpen: !s.explainOpen })),
-    toggleAssistant: () => set((s) => ({ assistantOpen: !s.assistantOpen })),
+    toggleExplain: () => set((s) => ({ explainOpen: !s.explainOpen, assistantOpen: s.explainOpen ? s.assistantOpen : false })),
+    toggleAssistant: () => set((s) => ({ assistantOpen: !s.assistantOpen, explainOpen: s.assistantOpen ? s.explainOpen : false })),
+    openDrill: (drill) => set({ drill }),
+    closeDrill: () => set({ drill: null }),
+    setDraftTitle: (name) => set({ currentReport: { id: `draft_${Date.now().toString(36)}`, name } }),
     clear: () => {
       set({ currentReport: null, chart: 'auto', result: null })
       recompile(emptyQuery())
