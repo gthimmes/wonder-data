@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "gen:data": "tsx scripts/generate-data.ts",
     "test": "vitest run",
-    "check:browser": "node scripts/browser-check.mjs --screens ../docs/screens"
+    "check:browser": "node scripts/browser-check.mjs --screens ../docs/screens",
+    "demo:video": "node scripts/demo-video.mjs --out ../docs/demo"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.133.0",

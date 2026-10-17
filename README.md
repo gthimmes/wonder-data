@@ -16,6 +16,7 @@ pnpm dev        # http://localhost:5173
 pnpm test       # compiler and template tests against native DuckDB
 pnpm check:browser  # with pnpm dev running: drives headless Chrome, runs every template in DuckDB-WASM, screenshots to docs/screens
 pnpm check:browser -- --assistant  # also exercises the assistant end to end (calls a model; opt-in)
+pnpm demo:video     # with pnpm dev running: records a captioned 70-second product demo to docs/demo/wonder-demo.webm
 pnpm build
 ```
 
